@@ -1,25 +1,39 @@
 const express = require("express");
+const { createTodo, updateTodo } = require("./zod")
 const app = express();
 
 app.use(express.json());
 
 app.post("/todo", (req, res) => {
-    res.json({
-        message: "hello world"
-    })
+    const createPayload = req.body;
+    const parsePayload = createTodo.safeParse(createPayload);
+
+    if(!parsePayload){
+        res.status(411).json({
+            message: "You sent the wrong inputs"
+        })
+        return;
+    }
+
+    //put it in mongodb
 })
 
 app.get("/todos", (req, res ) => {
-    res.json({
-        message: "hello world hjsdfhdssdfsdfsd adfsdfsad"
-    })
+    // const 
 });
 
 app.put("/completed", (req, res) => {
 
-    res.json({
-        message: "hello world adfs afsdfs"
+   const updatePayload = req.body;
+   const parsePayload = updateTodo.safeParse(updatePayload);
+
+   if(!parsePayload){
+    res.status(411).json({
+        message: "You sent the wrong inputs"
     })
+    return;
+   }
+   
 })
 
 app.listen(3000, ()=> {
