@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { Button } from "./button"
 
 export function Todos({todos}){
     // console.log(todos);
@@ -11,9 +12,7 @@ export function Todos({todos}){
                     <h1 className="text-2xl font-semibold text-gray-800 truncate">{todo.title}</h1>
                     <h2 className="text-lg text-gray-600 mt-2 line-clamp-none">{todo.description}</h2>
                 </div>
-                <div className="flex justify-center py-3 text-white rounded-xl">
-                    <button className="bg-black text-white p-2  rounded-2xl hover:text-black hover:bg-red-400 w-full max-w-[250px]">{todo.completed == true ? "Completed" : "Mark as completed"}</button>
-                </div>
+                <Button> {todo.completed == true ? "Completed" : "Mark as completed"} </Button>
             </div>
         })}
         </div>

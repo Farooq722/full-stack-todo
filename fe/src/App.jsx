@@ -30,8 +30,8 @@ function App() {
         <Taskbar />
         <div className='flex flex-row space-x-0'>
           <Boxs title="Total Task" count={todosCount}></Boxs>
-          <Boxs title="Completed" count={5}></Boxs>
-          <Boxs title="Pending" count={4}></Boxs>
+          <Boxs title="Completed" count={0}></Boxs>
+          <Boxs title="Pending" count={0}></Boxs>
         </div>
         <CreateTodo></CreateTodo>
         <Todos todos={todos}></Todos>
