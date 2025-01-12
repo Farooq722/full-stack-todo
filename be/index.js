@@ -1,7 +1,6 @@
 const express = require('express'); 
 const authRoute = require("./routes/auth");
 const todoRoute = require("./routes/todo");
-const error = require("./utils/error");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
