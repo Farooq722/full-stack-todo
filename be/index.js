@@ -22,10 +22,6 @@ app.use(cookieParser());
 app.use("/api/user", authRoute);
 app.use("/api/todos", todoRoute);
 
-app.get("/", (req, res, next) => {
-    console.log("hello world");
-})
-
 app.use((err, req, res, next) => {
     const statusCode = err.statusCode || 500;
     const message = err.message || "Internal server error";
