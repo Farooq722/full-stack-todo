@@ -1,7 +1,7 @@
 const createError = require("../utils/error");
 const connectDB = require("../utils/connect");
 const User = require("../mongoose/userModel");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 async function register(req, res, next) {
