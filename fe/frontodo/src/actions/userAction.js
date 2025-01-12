@@ -4,7 +4,7 @@ export async function register(previousState, formData) {
     console.log(previousState, formData);
 
     try {
-
+        //
         const email = formData.get("email");
         const password = formData.get("password");
         console.log({email, password});
