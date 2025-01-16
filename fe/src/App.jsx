@@ -24,7 +24,7 @@ function App() {
       })
     }
     todosFetch();
-  },[todos]);
+  },[]);
   
   return (
     <div className='bg-gradient-to-r from-cyan-200 to-blue-300 h-screen w-full max-w-screen '>
