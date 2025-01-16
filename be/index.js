@@ -28,6 +28,12 @@ app.use((err, req, res, next) => {
     res.status(statusCode).json({error: message});
 })
 
+app.get("/", (req, res) => {
+    res.send({
+        msg: "HEllow moto"
+    })
+})
+
 app.listen(port, () => {
     console.log(`Port is listening on ${port}`);
 })
