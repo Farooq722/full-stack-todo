@@ -12,7 +12,7 @@ const port = 3000;
 dotenv.config()
 
 const corsOptions = {
-    origin: "http://localhost:5178",
+    origin: process.env.FRONTEND_URL,
     credentials: true,
 }
 

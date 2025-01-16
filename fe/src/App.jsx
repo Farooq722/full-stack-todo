@@ -4,6 +4,8 @@ import { Taskbar } from './components/Taskbar';
 import { Boxs } from './components/Boxs';
 import './App.css'
 import { Todos } from './components/Todos'
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -15,7 +17,7 @@ function App() {
 
   useEffect(() => {
     const todosFetch = () => {
-      fetch("http://localhost:3000/todos").then(async function(res) {
+      fetch(`${backendUrl}/todos`).then(async function(res) {
         const json = await res.json();
         setTodos(json.todo);
         setTodosCount(json.todo.length);
