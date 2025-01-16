@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import Button from "./button"
+import { Button } from "./Button"
 
 export function Todos({todos}){
     // console.log(todos);
