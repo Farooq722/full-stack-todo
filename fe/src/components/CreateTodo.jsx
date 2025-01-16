@@ -22,7 +22,7 @@ export function CreateTodo(){
         }} className="p-2 rounded-lg text-center w-60 border-2 border-zinc-900 font-sans font-medium bg-white "></input>
 
         <button onClick={()=> {
-            fetch(`backendUrl/todo`, {
+            fetch(`${backendUrl}/todo`, {
                 method: "POST",
                 body: JSON.stringify({
                     title: title,
